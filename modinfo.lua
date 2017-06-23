@@ -1,15 +1,15 @@
 name = "Stronger Abigail"
 author = "sexyeggroll"
-version = "1.1"
+version = "1.1.1"
 forumthread = ""
-description = "Set Abigail's HP/HP Regen/DMG/AoE/Speed/Player DMG -- version 1.1"
+description = "Set Abigail's HP/HP Regen/DMG/AoE/Speed/Player DMG -- version 1.1.1"
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"
  
 api_version = 10
  
 dst_compatible = true
-priority = 1
+priority = 4
 
 configuration_options = 
 {

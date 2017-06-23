@@ -62,13 +62,16 @@ local function auratest(inst, target)
     return not target:HasTag("player") and target:HasTag("monster") or target:HasTag("prey")
 end
 
+--inside is custom code to set abigail's damage to mod user specification
 local function updatedamage(inst, phase)
+    local set_dmg = GetModConfigData("abigail_dmg", "workshop-947917522")
+	
     if phase == "day" then
-        inst.components.combat.defaultdamage = .5 * TUNING.ABIGAIL_DAMAGE_PER_SECOND 
+        inst.components.combat.defaultdamage = set_dmg
     elseif phase == "night" then
-        inst.components.combat.defaultdamage = 2 * TUNING.ABIGAIL_DAMAGE_PER_SECOND     
+        inst.components.combat.defaultdamage = set_dmg 
     elseif phase == "dusk" then
-        inst.components.combat.defaultdamage = TUNING.ABIGAIL_DAMAGE_PER_SECOND 
+        inst.components.combat.defaultdamage = set_dmg
     end
 end
 
